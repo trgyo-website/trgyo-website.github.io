@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>TORUNLAR GYO</title>
+	<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Staatliches&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ <script type="text/javascript">
+ 	$(document).ready(function () {
+            $("#help").click(function () {
+                $("#kutu").toggleClass("kapa");
+            });
+        });
+ 		</script>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<div id="logo">
+				<a href="index.html"><img src="images/torunlar.png" alt="LOGO"></a>
+			
+			<ul id="navigation">
+				<li >
+					<a href="index.html">Anasayfa</a>
+				</li>
+				<li>	
+					<a href="hakkımda.html">Hakkımızda  </a>
+				</li>
+				<li>
+					<a href="varlık.html">Varlıklar</a>
+				</li>
+				
+				<li>
+					<a href="yatırım.html">Yatırımcı İlişkileri</a>
+				</li>
+				<li class="selected">
+					<a href="iletisim.html">İletişim</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+	 <div id="bilgi">
+        		<b>
+        			İLETİŞİM
+        		</b>
+        		<p>
+Rüzgarlıbahçe Mahallesi Özalp Çıkmazı No: 4 34805 Beykoz/İstanbul <br> <br>
+ 
+Tel	:	(0216) 425 03 28 / (0216) 425 20 07 <br> <br>
+ 
+Faks	:	(0216) 425 59 57 <br> <br>
+ 
+E-mail	:	info@torunlargyo.com.tr</p>
+
+        </div>
+			<div id="maps">
+				<p>HARİTA</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.7064533811563!2d29.093899415486487!3d41.09281257929233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cacbb59859d4bf%3A0x52173a70476b7500!2zUsO8emdhcmzEsWJhaMOnZSwgw5Z6YWxwIFNva2HEn8SxIE5vOjQsIDM0ODA1IEJleWtvei_EsHN0YW5idWwsIFTDvHJraXll!5e1!3m2!1str!2sus!4v1592495860001!5m2!1str!2sus" width="1000" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                     
+			</div>
+	
+	<div class="container">
+        <form id="contact" action="#" method="post">
+            <h2>İletişim Sayfası</h2>
+            <div class="form-control">
+                <input id="ad" onblur="adKontrol()" placeholder="Adınız" type="text" required autofocus>
+            </div>
+            <div class="form-control">
+                <input id="soyad" onblur="soyadKontrol()" placeholder="Soyadınız" type="text" required="" >
+            </div>
+            <div class="form-control">
+                <input placeholder="E-Posta Adresiniz" name="mail" id="email" type="text" onclick="kontrolet();" value="" required>
+            </div>
+            <div class="form-control">
+                <textarea  placeholder="Lütfen Mesajınızı Buraya Yazın.." required></textarea>
+            </div>
+            <div class="form-control">
+                <button name="submit" type="submit" id="submit">GÖNDER</button>
+            </div>
+            <div id="sonuc"></div>
+            <div id="sonucum"></div>
+
+
+
+
+
+
+            	<script type="text/javascript">
+            		
+            			function adKontrol()
+            			{
+
+            				var e=document.getElementById("ad").value;
+            				var say=e.length;
+
+            				if (say<3) {
+            					document.getElementById("sonuc").innerHTML="Adınız en az 3 karakter olmalı şuan "+say+" karakter";
+
+
+            				}
+            			}
+            				function soyadKontrol()
+            				{
+            				var e=document.getElementById("soyad").value;
+            				var sayy=e.length;
+
+            				if (sayy<3) {
+            					document.getElementById("sonucum").innerHTML="Soyadınız en az 3 karakter olmalı şuan "+sayy+" karakter";
+
+
+            				}
+            			}
+
+            			function kontrolet()
+						{
+							var mail = document.getElementById("email").value;
+								var regex = /^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+.)+([.])+[a-zA-Z0-9.-]{2,4}$/;
+							if (regex.test(mail)==true)
+							{alert("Mail adresi geçerli");}
+							else
+								{alert("Hata geçersiz mail adresi girdiniz!");}
+								}
+
+
+
+
+
+
+
+
+
+            	</script>
+
+
+
+        </form>
+    </div>
+   <div id="help">
+
+		<p> Canlı Destek İçin Tıkla</p>
+	</div>
+	<div id="kutu">
+		
+		<input id="mesaj" type="text" placeholder="Canlı desteğe yazın"  name="" required="required">
+		<input id="but" type="button" 	value="GÖNDER" name="">
+		</div>
+
+	
+<div  id="footer">
+		
+		<p>
+©Copyright 2016 Torunlar GYO <br>
+Torunlar GYO, web sitesinde her türlü bilgiyi değiştirme, düzeltme ve yayınlama hakkını saklı tutar		</p>
+<a>
+	Rüzgarlıbahçe Mahallesi Özalp Çıkmazı No: 4 34805 Beykoz / İstanbul <br>
+T: +90 216 425 03 28 / +90 216 425 20 07 F: +90 216 425 59 57
+</a><br>
+</div>
+</body>
+</html>

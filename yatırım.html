@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8">
+	<title>TORUNLAR GYO</title>
+	<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+	
+		<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Staatliches&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	 <script type="text/javascript">
+ 	$(document).ready(function () {
+            $("#help").click(function () {
+                $("#kutu").toggleClass("kapa");
+            });
+        });
+</script>
+</head>
+<body bgcolor="#aaa">
+	<div id="header">
+		<div>
+			<div id="logo">
+				<a href="index.html"><img src="images/torunlar.png" alt="LOGO"></a>
+			</div>
+			
+			<ul id="navigation">
+				<li >
+					<a href="index.html">Anasayfa</a>
+				</li>
+				<li>	
+					<a href="hakkımda.html">Hakkımızda  </a>
+				</li>
+				<li>
+					<a href="varlık.html">Varlıklar</a>
+				</li>
+				
+				<li class="selected">
+					<a href="yatırım.html">Yatırımcı İlişkileri</a>
+				</li>
+				<li>
+					<a href="iletisim.html">İletişim</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div>
+			
+
+	</div>
+	<div class="slider">
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+			  <div class="numbertext" >1 / 4</div>
+			  <img src="images/korupark_avm.jpg" style="width:100%; ">
+			  <div class="text">KORUPARK AWM</div>
+			</div>
+			
+			<div class="mySlides fade">
+			  <div class="numbertext">2 / 4</div>
+			  <img src="images/zafer_plaza.jpg" style="width:100%;">
+			  <div class="text">ZAFER PLAZA</div>
+			</div>
+			<div class="mySlides fade">
+			  <div class="numbertext">3 / 4</div>
+			  <img src="images/deepo.jpg" style="width:100%;">
+			  <div class="text">DEEPO CENTER</div>
+			</div>
+			<div class="mySlides fade">
+			  <div class="numbertext">4 / 4</div>
+			  <img src="images/torium.jpg" style="width:100%;">
+			  <div class="text">TORİUM AVM</div>
+			</div>
+			
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+	</div>
+
+
+<div id="help">
+
+		<p> Canlı Destek İçin Tıkla</p>
+	</div>
+	<div id="kutu">
+		
+		<input id="mesaj" type="text" placeholder="Canlı desteğe yazın"  name="" required="required">
+		<input id="but" type="button" 	value="GÖNDER" name="">
+	</div>
+
+
+	<div id="footer">
+		
+		<p>
+©Copyright 2016 Torunlar GYO <br>
+Torunlar GYO, web sitesinde her türlü bilgiyi değiştirme, düzeltme ve yayınlama hakkını saklı tutar		</p>
+<a>
+	Rüzgarlıbahçe Mahallesi Özalp Çıkmazı No: 4 34805 Beykoz / İstanbul <br>
+T: +90 216 425 03 28 / +90 216 425 20 07 F: +90 216 425 59 57
+</a><br>
+	</div>
+	</BODY>
+	<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+   setTimeout(showSlides, 0,2);
+}
+</script>
+	</html>
