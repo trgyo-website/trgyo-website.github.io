@@ -527,7 +527,7 @@ body {
     cursor: pointer;
     width: 100%;
     border: none;
-    background:#363636;
+    background:red;
     color: white;
     margin: 0 0 5px;
     padding: 10px;
